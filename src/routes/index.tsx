@@ -117,10 +117,10 @@ function Index() {
               </div>
             </div>
           </div>
+          <HeroSlider />
         </div>
       </section>
 
-      <HeroSlider />
 
       <section className="border-y border-line/70 bg-white/40 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-6 py-5">
