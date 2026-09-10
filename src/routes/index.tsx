@@ -44,6 +44,9 @@ function Index() {
             <a href="#voices" className="transition-colors hover:text-ink">
               Clients
             </a>
+            <Link to="/blog" className="transition-colors hover:text-ink">
+              Insights
+            </Link>
           </div>
           <a
             href="#contact"
@@ -116,6 +119,8 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <HeroSlider />
 
       <section className="border-y border-line/70 bg-white/40 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-6 py-5">
@@ -289,6 +294,47 @@ function Index() {
         </div>
       </section>
 
+      <section id="insights" className="mx-auto max-w-6xl px-6 pb-20">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div className="max-w-[30ch]">
+            <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">(e) Insights</span>
+            <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight text-balance">Notes from the table.</h2>
+          </div>
+          <Link to="/blog" className="text-sm font-semibold text-primary transition-colors hover:text-ink">
+            View all insights →
+          </Link>
+        </div>
+        <div className="mt-10 grid gap-4 md:grid-cols-3">
+          {posts.map((post) => (
+            <Link
+              key={post.slug}
+              to="/blog/$slug"
+              params={{ slug: post.slug }}
+              className="flex flex-col overflow-hidden rounded-3xl bg-white/60 ring-1 ring-line backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/80 hover:shadow-xl hover:shadow-primary/10"
+            >
+              <img
+                src={post.cover}
+                alt={post.coverAlt}
+                width={1200}
+                height={800}
+                loading="lazy"
+                className="aspect-[16/10] w-full object-cover"
+              />
+              <div className="flex flex-1 flex-col p-6">
+                <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
+                  <span className="rounded-full bg-primary-soft px-2.5 py-1 text-primary">{post.category}</span>
+                  <span>{post.readTime}</span>
+                </div>
+                <h3 className="mt-4 font-display text-lg font-semibold leading-snug tracking-tight text-balance">
+                  {post.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-pretty text-muted">{post.excerpt}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section id="contact" className="mx-auto max-w-6xl px-6 pb-24">
         <div className="relative overflow-hidden rounded-[2rem] bg-primary p-8 text-white ring-1 ring-primary/30 md:p-14">
           <div className="pointer-events-none absolute -right-16 -top-16 size-64 rounded-full bg-primary-soft/40 blur-3xl" />
@@ -331,6 +377,9 @@ function Index() {
             <a href="#about" className="transition-colors hover:text-ink">
               About
             </a>
+            <Link to="/blog" className="transition-colors hover:text-ink">
+              Insights
+            </Link>
             <a href="#contact" className="transition-colors hover:text-ink">
               Contact
             </a>
