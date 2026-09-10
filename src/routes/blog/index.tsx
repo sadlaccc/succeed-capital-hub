@@ -23,7 +23,8 @@ export const Route = createFileRoute("/blog/")({
 });
 
 function BlogIndex() {
-  const [lead, ...rest] = posts;
+  const lead = posts[0]!;
+  const rest = posts.slice(1);
 
   return (
     <div className="min-h-screen bg-background font-body text-ink antialiased">
