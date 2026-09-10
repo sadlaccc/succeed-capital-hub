@@ -48,10 +48,10 @@ export default function HeroSlider() {
   }, [paused]);
 
   return (
-    <section
+    <div
       aria-label="Featured highlights"
       aria-roledescription="carousel"
-      className="mx-auto max-w-6xl px-6 pb-16"
+      className="mt-12"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
