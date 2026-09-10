@@ -361,30 +361,73 @@ function Index() {
         </div>
       </section>
 
-      <footer className="border-t border-line/70">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-muted md:flex-row md:items-center md:justify-between">
-          <div className="flex items-center gap-2.5">
-            <span className="grid size-7 place-items-center rounded-lg bg-primary/15 font-display text-base font-bold text-primary">S</span>
-            <span className="font-display font-semibold text-ink">Succeed Capital</span>
+      <footer className="border-t border-line/70 bg-white/40">
+        <div className="mx-auto max-w-6xl px-6 py-14">
+          <div className="grid gap-10 md:grid-cols-12">
+            <div className="md:col-span-4">
+              <div className="flex items-center gap-2.5">
+                <span className="grid size-8 place-items-center rounded-lg bg-primary/15 font-display text-lg font-bold text-primary ring-1 ring-primary/25">S</span>
+                <span className="font-display text-lg font-semibold tracking-tight text-ink">Succeed Capital</span>
+              </div>
+              <p className="mt-4 max-w-[34ch] text-sm leading-relaxed text-pretty text-muted">
+                Financing and consultancy for businesses of every size and sector — patient capital paired with hands-on counsel.
+              </p>
+              <div className="mt-5 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
+                <span className="size-1.5 rounded-full bg-accent" />
+                Trusted across 14 industries
+              </div>
+            </div>
+
+            <nav aria-label="Services" className="md:col-span-2">
+              <h3 className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">Services</h3>
+              <ul className="mt-4 space-y-2.5 text-sm text-muted">
+                <li><a href="#services" className="transition-colors hover:text-ink">Corporate Financing</a></li>
+                <li><a href="#services" className="transition-colors hover:text-ink">Strategic Advisory</a></li>
+                <li><a href="#services" className="transition-colors hover:text-ink">Private Wealth</a></li>
+                <li><a href="#services" className="transition-colors hover:text-ink">Public Markets</a></li>
+                <li><a href="#services" className="transition-colors hover:text-ink">Wealth Structuring</a></li>
+              </ul>
+            </nav>
+
+            <nav aria-label="Company" className="md:col-span-2">
+              <h3 className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">Company</h3>
+              <ul className="mt-4 space-y-2.5 text-sm text-muted">
+                <li><a href="#about" className="transition-colors hover:text-ink">About us</a></li>
+                <li><a href="#sectors" className="transition-colors hover:text-ink">Sectors</a></li>
+                <li><a href="#voices" className="transition-colors hover:text-ink">Clients</a></li>
+                <li><Link to="/blog" className="transition-colors hover:text-ink">Insights</Link></li>
+                <li><a href="#contact" className="transition-colors hover:text-ink">Contact</a></li>
+              </ul>
+            </nav>
+
+            <div className="md:col-span-4">
+              <h3 className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">Get in touch</h3>
+              <ul className="mt-4 space-y-2.5 text-sm text-muted">
+                <li>
+                  <a href="mailto:hello@succeed.capital" className="font-medium text-ink transition-colors hover:text-primary">
+                    hello@succeed.capital
+                  </a>
+                </li>
+                <li>Mon–Fri, 8:00–18:00 EAT</li>
+                <li>Nairobi · Kampala · Dar es Salaam · Kigali</li>
+              </ul>
+              <a
+                href="#contact"
+                className="mt-5 inline-block rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-background transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/15"
+              >
+                Book a consult
+              </a>
+            </div>
           </div>
-          <div className="flex flex-wrap gap-x-6 gap-y-1">
-            <a href="#services" className="transition-colors hover:text-ink">
-              Services
-            </a>
-            <a href="#sectors" className="transition-colors hover:text-ink">
-              Sectors
-            </a>
-            <a href="#about" className="transition-colors hover:text-ink">
-              About
-            </a>
-            <Link to="/blog" className="transition-colors hover:text-ink">
-              Insights
-            </Link>
-            <a href="#contact" className="transition-colors hover:text-ink">
-              Contact
-            </a>
+
+          <div className="mt-12 flex flex-col gap-3 border-t border-line/70 pt-6 text-xs text-muted md:flex-row md:items-center md:justify-between">
+            <span className="font-mono text-[11px]">© 2026 Succeed Capital. All rights reserved.</span>
+            <div className="flex flex-wrap gap-x-6 gap-y-1">
+              <a href="#contact" className="transition-colors hover:text-ink">Privacy</a>
+              <a href="#contact" className="transition-colors hover:text-ink">Terms</a>
+              <a href="#contact" className="transition-colors hover:text-ink">Disclosures</a>
+            </div>
           </div>
-          <span className="font-mono text-[11px]">© 2024 Succeed Capital</span>
         </div>
       </footer>
     </div>
